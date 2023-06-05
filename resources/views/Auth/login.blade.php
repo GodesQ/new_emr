@@ -11,7 +11,7 @@
     <meta name="keywords"
         content="admin template, stack admin template, dashboard template, flat admin template, responsive admin template, web app" />
     <meta name="author" content="PIXINVENT" />
-    <title>Merita - Dashboard</title>
+    <title>GOMEDICAL</title>
     <link rel="apple-touch-icon" href="../../../app-assets/images/logo/medical_logo_icon.png" />
     <link rel="shortcut icon" type="image/x-icon" href="../../../app-assets/images/logo/medical_logo_icon.png" />
     <link
