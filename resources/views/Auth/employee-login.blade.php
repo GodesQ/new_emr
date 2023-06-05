@@ -67,7 +67,6 @@
                                     <div class="card-title text-center">
                                         <h2>Employee Login</h2>
                                     </div>
-                                    <br>
                                     <div class="card-content">
                                         <div class="card-body">
                                             <form class="form-horizontal" action="/save-employee-login" method="POST">

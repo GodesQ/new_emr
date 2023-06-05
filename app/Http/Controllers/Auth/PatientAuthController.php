@@ -73,15 +73,20 @@ class PatientAuthController extends Controller
 
         $latestPatientCodeData = DB::table('mast_patient')->latest('patientcode')->first();
 
-        $latestPatientCode = substr($latestPatientCodeData->patientcode, 4);
+        if($latestPatientCodeData) {
+            $latestPatientCode = substr($latestPatientCodeData->patientcode, 4);
 
-         // generate patient code
-         $addPatientCode = $latestPatientCode + 1;
-         if ($addPatientCode > 9999) {
-             $patientCode = 'P' . date('y') . '-0' . $addPatientCode;
-         } else {
-             $patientCode = 'P' . date('y') . '-00' . $addPatientCode;
-         }
+            // generate patient code
+            $addPatientCode = $latestPatientCode + 1;
+            if ($addPatientCode > 9999) {
+                $patientCode = 'P' . date('y') . '-0' . $addPatientCode;
+            } else {
+                $patientCode = 'P' . date('y') . '-00' . $addPatientCode;
+            }
+        } else {
+            $patientCode = 'P' . date('y') . '-0' . 1;
+        }
+
 
          $patient = Patient::create([
             'patientcode' => $patientCode,

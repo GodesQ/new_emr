@@ -62,7 +62,6 @@
                                         <img src="../../../app-assets/images/logo/medical_logo.png" class="img-fluid"
                                             alt="branding logo" />
                                     </div>
-                                    <br>
                                     <div class="card-content">
                                         <div class="card-body">
                                             <h2>Login Now</h2>
