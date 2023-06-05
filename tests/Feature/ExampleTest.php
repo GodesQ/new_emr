@@ -14,8 +14,12 @@ class ExampleTest extends TestCase
      */
     public function testBasicTest()
     {
-        $response = $this->get('/');
+        $response = $this->post('/save-register', [
+            'email' => 'james@godesq.com',
+            'password' => '123456789',
+            'password_confirmation' => '123456789'
+        ]);
 
-        $response->assertStatus(200);
+        $response->assertRedirect('/verify-message');
     }
 }
