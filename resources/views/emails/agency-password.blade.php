@@ -96,7 +96,7 @@
                             style="padding: 20px 20px 0px 20px; border-radius: 4px 4px 0px 0px; color: #111111; font-family: 'Google Sans', Helvetica, Arial, sans-serif; font-size: 3px; font-weight: 400; letter-spacing: 4px; line-height: 48px;">
                             <img src=" https://meritaclinic.ph/wp-content/uploads/2022/03/Merita-Logo.png"
                                 width="125" height="120" style="display: block; border: 0px;" />
-                            <h1 style="font-size: 32px; font-weight: 800; margin-bottom: 0;">Welcome to Merita EMR!</h1>
+                            <h1 style="font-size: 32px; font-weight: 800; margin-bottom: 0;">Welcome to GOMEDICAL!</h1>
                         </td>
                     </tr>
                 </table>

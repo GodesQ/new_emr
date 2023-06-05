@@ -31,7 +31,7 @@ class AgencyResetPassword extends Mailable
     {
         $email = $this->email;
         $id = $this->id;
-        return $this->subject('Merita EMR: Reset Password')->view(
+        return $this->subject('GOMEDICAL: Reset Password')->view(
             '/emails.agency-reset',
             compact('email', 'id')
         );

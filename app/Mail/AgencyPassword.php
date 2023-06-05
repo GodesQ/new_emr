@@ -30,7 +30,7 @@ class AgencyPassword extends Mailable
     public function build()
     {
         $details = $this->details;
-        return $this->subject('Merita EMR: Login Credentials')->view(
+        return $this->subject('GOMEDICAL: Login Credentials')->view(
             '/emails.agency-password',
             compact('details')
         );

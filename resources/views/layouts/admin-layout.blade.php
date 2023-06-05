@@ -10,9 +10,9 @@
     <meta http-equiv='pragma' content='no-cache'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
     <meta name="description"
-        content="MERITA EMR is a website application from MERITA DIAGNOSTIC CLINIC"
+        content="GOMEDICAL is a website application from MERITA DIAGNOSTIC CLINIC"
     <meta name="author" content="MERITA">
-    <title>Merita EMR - Electronic Medical Record System</title>
+    <title>GOMEDICAL - Electronic Medical Record System</title>
     <link rel="apple-touch-icon" href="../../../app-assets/images/ico/apple-icon-120.png">
     <link rel="shortcut icon" type="image/x-icon" href="../../../app-assets/images/logo/medical_logo_icon.png">
     <link

@@ -20,7 +20,7 @@
         font: normal 12px sans-serif;
     }
 
-    .text-below { 
+    .text-below {
         word-spacing: 1rem;
         font-weight: 600;
         font-size: 0.8rem;
@@ -195,16 +195,16 @@ $logo = 'data:image/' . $type . ';base64,' . base64_encode($data);
 <table width="100%" celspacing="0" cellpadding="5" style="text-align: center; border: 1px solid #476434;" >
     <tbody>
         <tr width="90%" style="border: 1px solid black; text-align: center;">
-             
+
              <td width="25%" style="text-align: right;">
                 <img src="{{ $logo }}" width="80" />
             </td>
             <td width="75%">
-               
+
                      <h2 style="font-family: serif; font-size: 16px; font-weight: 600;">MERITA DIAGNOSTIC CLINIC INC.</h2>
                     <p style="line-height: 10px;">5th floor Jettac Bldg. 920 Pres. Quirino Ave.cor. San Antonio, Malate, Manila</p>
                     <p style="line-height: 10px;">Tel: (02) 310-0595/404-3441 / Cell No. 0917-8576942 Email: mdcinc2019@gmail.com</p>
-              
+
             </td>
         </tr>
     </tbody>
@@ -216,7 +216,7 @@ $logo = 'data:image/' . $type . ';base64,' . base64_encode($data);
         </tr>
         <tr>
             <td>
-                1. Register to the Merita EMR: https://meritaclinic.app/register.
+                1. Register to the GOMEDICAL: https://meritaclinic.app/register.
             </td>
         </tr>
         <tr>
@@ -243,13 +243,13 @@ $logo = 'data:image/' . $type . ';base64,' . base64_encode($data);
                 {{$referral ? date_format(new DateTime($referral->trans_date), "F d, Y") : null}}
             </td>
             <td width="50%" style="text-align: center; border-bottom: 1px solid #476434">
-                
+
             </td>
         </tr>
         <tr>
             <td style="text-align: center; font-size: 11px; font-family: sans-serif;">
             Date of PEME
-            </td>                      
+            </td>
             <td style="text-align: center; font-size: 11px; font-family: sans-serif;">Signature</td>
         </tr>
     </tbody>
@@ -300,7 +300,7 @@ $logo = 'data:image/' . $type . ';base64,' . base64_encode($data);
 <tbody>
     <tr height="30px">
         <td width="30%">&nbsp;</td>
-        <td width="40%" style="text-align: center; border-bottom: 1px solid #476434;"> 
+        <td width="40%" style="text-align: center; border-bottom: 1px solid #476434;">
             @if($referral)
                 @if($referral->signature)
                     <img width="150px" height="45px" style="object-fit:cover;" src="@php echo base64_decode($referral->signature)@endphp" alt="">
@@ -311,7 +311,7 @@ $logo = 'data:image/' . $type . ';base64,' . base64_encode($data);
                 <div></div>
             @endif
         </td>
-        <td width="30%">&nbsp;</td> 
+        <td width="30%">&nbsp;</td>
     </tr>
     <tr>
         <td width="30%">&nbsp;</td>

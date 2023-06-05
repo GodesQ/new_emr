@@ -227,7 +227,7 @@
                                                                 <img class="img-fluid" src="../../../app-assets/images/gallery/hold_button.png"  alt="hold button" />
                                                                 <ul>
                                                                     <li>
-                                                                        <b>HOLD REFERRAL SLIP =></b>  It means that a referral slip of an employee has an issue or problem, so that the patient is not eligible to register in MERITA EMR.
+                                                                        <b>HOLD REFERRAL SLIP =></b>  It means that a referral slip of an employee has an issue or problem, so that the patient is not eligible to register in GOMEDICAL.
                                                                     </li>
                                                                     <li>
                                                                         Once you click hold referral slip, The Patient that you click hold button and Merita will be emailed that this referral slip is hold,
@@ -242,7 +242,7 @@
                                                                 <img class="img-fluid" src="../../../app-assets/images/gallery/activate_button.png"  alt="hold button" />
                                                                 <ul>
                                                                     <li>
-                                                                        <b>ACTIVATE REFERRAL SLIP =></b>  It means that a referral slip of employees is acceptable, so that patient is now applicable to register in MERITA EMR.
+                                                                        <b>ACTIVATE REFERRAL SLIP =></b>  It means that a referral slip of employees is acceptable, so that patient is now applicable to register in GOMEDICAL.
                                                                     </li>
                                                                     <li>
                                                                         Once you click activate referral slip, The patient that you click activate button and Merita Clinic will be emailed that a specified referral slip of patient is activated,
