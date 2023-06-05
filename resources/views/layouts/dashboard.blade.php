@@ -1,7 +1,7 @@
 @extends('layouts.admin-layout')
 
 @section('name')
-{{$data['employeeFirstname'] . " " . $data['employeeLastname']}}
+    {{$data['employeeFirstname'] . " " . $data['employeeLastname']}}
 @endsection
 
 @section('employee_image')

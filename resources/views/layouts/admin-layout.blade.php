@@ -57,7 +57,7 @@
                     <li class="nav-item"><a class="navbar-brand" href="/dashboard" style="display: flex; justify-content: center;"><img
                                 class="brand-logo logo-sm img-responsive" alt="stack admin"
                                 src="../../../app-assets/images/logo/medical_logo_icon.png">
-                            <h2 class="brand-text align-middle" style="color: #44b8a1; font-weight: bold;">Merita <span style="color: #29477d;">EMR</span></h2>
+                            <h3 class="brand-text align-middle" style="color: #44b8a1; font-weight: bold;">GO <span style="color: #44b8a1;">MEDICAL</span></h3>
                         </a></li>
                     <li class="nav-item d-md-none"><a class="nav-link open-navbar-container" data-toggle="collapse"
                             data-target="#navbar-mobile"><i class="fa fa-ellipsis-v"></i></a></li>
@@ -75,8 +75,7 @@
                         <li class="nav-item nav-search"><a class="nav-link nav-link-search" href="#"><i
                                     class="ficon feather icon-search"></i></a>
                             <div class="search-input">
-                                <input class="input" type="text"
-                                    placeholder="Search by Lastname/Firstname/Patientcode..." tabindex="0"
+                                <input class="input" type="text" placeholder="Search by Lastname/Firstname/Patientcode..." tabindex="0"
                                     data-search="template-search">
                                 <div class="search-input-close"><i class="feather icon-x"></i></div>
                                 <ul class="search-list"></ul>
@@ -87,7 +86,7 @@
 
                         <li class="dropdown dropdown-user nav-item">
                             <a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown">
-                                <div class="avatar avatar-online">@yield('employee_image')<i></i></div><span
+                                <div class="avatar avatar-online"><img src="{{ URL::asset('app-assets/images/profiles/profilepic.jpg') }}" alt=""><i></i></div><span
                                     class="user-name">@yield('name')</span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right">
