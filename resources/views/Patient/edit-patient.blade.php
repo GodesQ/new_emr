@@ -1532,13 +1532,13 @@
                                         </a>
                                     </li>
                                 @endif
-                                <li class="nav-item">
+                                {{-- <li class="nav-item">
                                     <a class="nav-link d-flex text-white" id="account-vaccination-record" data-toggle="pill"
                                         aria-expanded="false" href="#account-vaccination-record">
                                         <i class="feather icon-edit"></i>
                                         Yellow Card
                                     </a>
-                                </li>
+                                </li> --}}
                                 @if($patientCode)
                                     @if(session()->get('dept_id') == '1' || session()->get('dept_id') == '8' || session()->get('dept_id') == '7')
                                         <li class="nav-item">
