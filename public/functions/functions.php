@@ -7,12 +7,12 @@
 date_default_timezone_set('Asia/Singapore');
 
 // DEFINE COMPANY CONSTANTS
-const compname = "MERITA DIAGNOSTIC CLINIC INC.";
+const compname = "GOMEDICAL DIAGNOSTIC CLINIC INC.";
 const compaddr = "5th & 6th Flr Jettac Bldg., 920 Quirino Ave. Cor. San Antonio St. Malate Manila";
 const comptelno = "310-0595";
 const compfaxno = "";
 const compweb = "meritaclinic@gmail.com / meritadiagnosticclinic@yahoo.com";
-const compinfo = 
+const compinfo =
 	"<b>5th & 6th Flr Jettac Bldg., 920 Quirino Ave. Cor. San Antonio St. Malate, Manila<b><br>
 	Tel No.: (02) 5310-032 / 5310-0825 / 0917-8576942 / 0908-8908850<br>
 	Email: meritaclinic@gmail.com / meritadiagnosticclinic@yahoo.com<br>
@@ -74,7 +74,7 @@ $conn = getConn($host,$dbid,$dbpwd,$db);
 $qstring = (isset($_SERVER['QUERY_STRING']))? $_SERVER['QUERY_STRING'] : "";
 $thisOffset = (initObj("thisOffset")=="") ? 0 : initObj("thisOffset");
 $lineIndex = initObj("lineIndex");
-$recperpage = 20;	
+$recperpage = 20;
 
 // ASSIGN VARIABLES
 $type = initObj("type");
@@ -141,7 +141,7 @@ if (strpos($script,"print")===false) 	require("footerheader.php");
 if (strpos($script,"print")!==false) 	require("footerheaderprt.php");
 
 //============================================================================================
-// EUREKA FUNCTIONS     
+// EUREKA FUNCTIONS
 //============================================================================================
 	function vdump($val) {
 		echo "<pre>"; var_dump($val); echo "</pre>";
@@ -157,7 +157,7 @@ if (strpos($script,"print")!==false) 	require("footerheaderprt.php");
 		else
 			return "<span style='font-size:15px;'>&#9744;</span> <span style='font-size:15px;'>&#9745;</span>";  //uncheck
 	}
-	
+
 	function readTextfile($filename) {
 		$myfile = fopen($filename, "r") or die("Unable to open file!");
 		$line = fgets($myfile);
@@ -171,7 +171,7 @@ if (strpos($script,"print")!==false) 	require("footerheaderprt.php");
 		else
 			return "<span style='font-size:15px;'>&#9744;</span>";  //uncheck
 	}
-	
+
 	function markSlash($val) {
 		return ($val=="") ? " / " : $val;
 	}
@@ -179,11 +179,11 @@ if (strpos($script,"print")!==false) 	require("footerheaderprt.php");
 	function getCount($table, $condition="1=1") {
 		$sql0 = "select count(id) as ct form $table where $condition";
 		$row = getRow($sql);
-		return $row['ct'];		  
+		return $row['ct'];
 	}
-	
+
 	function genButtons($userid,$scriptname,$id,$ynadd=0) {
-		$sql = "select * from main_useraccess a left join main_usergroup b on a.usergroup_id=b.id 
+		$sql = "select * from main_useraccess a left join main_usergroup b on a.usergroup_id=b.id
 			left join main_usergroupdtl c on b.id=c.usergroup_id left join main_module d on c.module_id=d.id
 			where a.user_id=$userid and d.link='$scriptname.php'";
 		$row = getRow($sql);
@@ -209,9 +209,9 @@ if (strpos($script,"print")!==false) 	require("footerheaderprt.php");
 		foreach ($arr as $tmp) {
 			$selected = ($tmp==$val) ? "selected" : "";
 			echo "<option value='$tmp' $selected>$tmp</option>";
-		}                        
+		}
 	}
-	
+
 	function initOptionTbl($table,$optval,$optlabel,$val,$withselect=1) {
 		if ($withselect==1) echo "<option value=''>--SELECT--</option>";
 		$result0 = getResult("select * from $table");
@@ -220,23 +220,23 @@ if (strpos($script,"print")!==false) 	require("footerheaderprt.php");
 			echo "<option value='".$row0[$optval]."' $selected>".$row0[$optlabel]."</option>";
 		}
 	}
-	
+
 	function initRadioArr($arr,$fld,$val) {
 		$ct = 0;
 		foreach ($arr as $tmp) {
-			if ($tmp=="Reset")  
+			if ($tmp=="Reset")
 				echo '<input name="'.$fld.'" type="radio" id="'.$fld.'_'.$ct.'" value="" '.initCheck($tmp,$val).'/>'.$tmp;
 			else
 				echo '<input name="'.$fld.'" type="radio" id="'.$fld.'_'.$ct.'" value="'.$tmp.'" '.initCheck($tmp,$val).'/>'.$tmp;
 			$ct++;
 		}
 	}
-	
+
 	function getStamp($table,$uid,$userid) {
 		global $dtSave;
 		return (getVal($table,"id=$uid","yndelete")=="") ? "yndelete=0 " : "updated_date='$dtSave',updated_by='$userid' ";
 	}
-	
+
 	function chkUID($val,$table,$userid,$condition="") {
 		return ($val!=0) ? $val : chkNum(getVal($table,"(yndelete is null) and created_by=$userid $condition","id"));
 	}
@@ -244,18 +244,18 @@ if (strpos($script,"print")!==false) 	require("footerheaderprt.php");
 	function chkNum($val) {
 		return ($val=="") ? 0 : $val;
 	}
-	
+
 	function getPerc($val) {
-		return round($val*100,0);	
+		return round($val*100,0);
 	}
-	
+
 	function setDefault($val,$defval="/") {
 		if ($val=="")
 			return $defval;
 		else
 			return $val;
 	}
-	
+
 	function getEmpInfo($position) {
 		global $tblUsers,$arrEmp;
 		$sql = "select *,case when title='' then concat(firstname,' ',lastname) when title<>'' then concat(firstname,' ',lastname,', ',title) end as fullname from $tblUsers where position='$position'";
@@ -275,13 +275,13 @@ if (strpos($script,"print")!==false) 	require("footerheaderprt.php");
 				if (($val=="1" && $option=="opt1") || ($val=="0" && $option=="opt2")) {
 					$ret = "<span style='font-size:".$size."px'>&#9745;</span>"; // check
 				}
-			} 
+			}
 			return $ret;
 		} else {
 			if (($val==1 && $option=="opt1") || ($val==2 && $option=="opt2") || ($val==3 && $option=="opt3") || ($val==4 && $option=="opt4"))
 				return "<span style='font-size:".$size."px'>&#9745;</span>"; // check
 			else
-				return "<span style='font-size:".$size."px'>&#9744;</span>"; // uncheck			
+				return "<span style='font-size:".$size."px'>&#9744;</span>"; // uncheck
 		}*/
 		if ($yesno==1) {
 			$ret = "<img src='images/icoUncheck.gif' width='10'>"; // uncheck
@@ -289,19 +289,19 @@ if (strpos($script,"print")!==false) 	require("footerheaderprt.php");
 				if (($val=="1" && $option=="opt1") || ($val=="0" && $option=="opt2")) {
 					$ret = "<img src='images/icoCheck.gif' width='10'>"; // check
 				}
-			} 
+			}
 			return $ret;
 		} else {
 			if (($val==1 && $option=="opt1") || ($val==2 && $option=="opt2") || ($val==3 && $option=="opt3") || ($val==4 && $option=="opt4"))
 				return "<img src='images/icoCheck.gif'>"; // check
 			else
-				return "<img src='images/icoUncheck.gif'>"; // uncheck	
+				return "<img src='images/icoUncheck.gif'>"; // uncheck
 		}
 	}
-	
+
 	function genCode($prefix, $code, $table) {
 		global $dateSave;
-		
+
 		$ret = "";
 		$sql0 = "select substring($code,5,6) as num from $table order by $code desc";
 		$row0 = getRow($sql0);
@@ -311,23 +311,23 @@ if (strpos($script,"print")!==false) 	require("footerheaderprt.php");
 		}
 		return $ret;
 	}
-	
+
 	function initActive($val1,$val2) {
 		if ($val1==$val2)
 			return "active";
 		else
 			return "";
 	}
-	
+
 	function initCheck($val,$chkval) {
 		return ($val==$chkval) ? "checked" : "";
 	}
-	
+
 	function getNameBy ($val) {
 		$retval = "";
 		if ($val!="")
 			$retval = getVal("mast_employee","id=$val","concat(firstname,' ',lastname)");
-		return $retval;	
+		return $retval;
 	}
 
 	function chkPic ($pictype,$code) {
@@ -449,10 +449,10 @@ if (strpos($script,"print")!==false) 	require("footerheaderprt.php");
 	//--------------------------------------------------------------------------------------------
 	function getAdmissionInfo($admission_id) {
 		global $peme_date,$position,$category,$patientcode,$lastname,$firstname,$middlename,$email,$gender,$license_no,$license_date,$gender,$address,$contactno,$nationality,$occupation,$religion,$maritalstatus,$passportno,$passport_expdate,$srbno,$srb_expdate,$birthdate,$birthplace,$patientname,$patientname0,$agencyname,$age,$signature;
-				
+
 		if ($admission_id=="")  $admission_id=0;
 		$sql0 = "select a.trans_date as peme_date,a.position,a.other_position,a.category,b.*,d.agencyname,c.*
-			from tran_admission a left join mast_patient b on a.patientcode=b.patientcode left join mast_patientinfo c on b.id=c.main_id 
+			from tran_admission a left join mast_patient b on a.patientcode=b.patientcode left join mast_patientinfo c on b.id=c.main_id
 			left join mast_agency d on a.agency_id=d.id
 			where a.id='$admission_id' and b.yndelete=0 and d.yndelete=0";
 		$row0 = getRow($sql0);
@@ -473,7 +473,7 @@ if (strpos($script,"print")!==false) 	require("footerheaderprt.php");
 			$signature = $row0['signature'];
 			// PATIENTINFO
 			$gender = $row0['gender'];
-			$address = $row0['address'];			
+			$address = $row0['address'];
 			$contactno = $row0['contactno'];
 			$nationality = $row0['nationality'];
 			$occupation = $row0['occupation'];
@@ -496,10 +496,10 @@ if (strpos($script,"print")!==false) 	require("footerheaderprt.php");
 	//--------------------------------------------------------------------------------------------
 	// LOGIN AN USER
 	//--------------------------------------------------------------------------------------------
-	
+
 	function getTechInfo ($techid,$techid2=0,$techid3=0) {
 		global $tech_sign,$tech_name,$tech_licno,$tech2_sign,$tech2_name,$tech2_licno,$tech3_sign,$tech3_name,$tech3_licno;
-		
+
 		// GET TECH 1 INFO
 		if ($techid=="")  $techid=0;
 		$sql = "select employeecode,username,case when title='' or title is null then concat(firstname,' ',left(middlename,1),'. ',lastname) when title<>'' then concat(firstname,' ',left(middlename,1),'. ',lastname,', ',title) end as techname,license_no
@@ -508,9 +508,9 @@ if (strpos($script,"print")!==false) 	require("footerheaderprt.php");
 		$tech_sign = (file_exists("pics/esignature/".$row['employeecode'].".jpg")) ? '<img src="pics/esignature/'.$row['employeecode'].'.jpg" alt="e-Signature" width="80" height="25"/>' : "";
 		$tech_name = $row['techname'];
 		$tech_licno = $row['license_no'];
-		
+
 		// GET TECH 2 INFO
-		
+
 		if ($techid2=="")  $techid2=0;
 		$sql = "select employeecode,username,case when title='' then concat(firstname,' ',left(middlename,1),'. ',lastname) when title<>'' then concat(firstname,' ',left(middlename,1),'. ',lastname,', ',title) end as techname,license_no
 			from mast_employee where id=$techid2";
@@ -518,7 +518,7 @@ if (strpos($script,"print")!==false) 	require("footerheaderprt.php");
 		$tech2_sign = (file_exists("pics/esignature/".$row['employeecode'].".jpg")) ? '<img src="pics/esignature/'.$row['employeecode'].'.jpg" alt="e-Signature" width="80" height="25"/>' : "";
 		$tech2_name = $row['techname'];
 		$tech2_licno = $row['license_no'];
-		
+
 		// GET TECH 3 INFO
 		if ($techid3=="")  $techid3=0;
 		$sql = "select employeecode,username,case when title='' then concat(firstname,' ',left(middlename,1),'. ',lastname) when title<>'' then concat(firstname,' ',left(middlename,1),'. ',lastname,', ',title) end as techname,license_no
@@ -528,18 +528,18 @@ if (strpos($script,"print")!==false) 	require("footerheaderprt.php");
 		$tech3_name = $row['techname'];
 		$tech3_licno = $row['license_no'];
 	}
-	
+
 	function getSignature($techid,$techid2) {
 		if ($techid=="")  $itechidd=0;
 		$sql = "select * from mast_employee where id=$techid";
 		$row = getRow($sql);
-		
+
 		return (file_exists("pics/esignature/".$row['employeecode'].".jpg")) ? '<img src="pics/esignature/'.$row['employeecode'].'.jpg" alt="e-Signature" width="100" height="35"/>' : "";
 	}
-	
+
 	function getTechName($techid) {
 		if ($techid=="")  $techid=0;
-		$sql = "select case when title='' then concat(firstname,' ',lastname) when title<>'' then concat(firstname,' ',lastname,', ',title) end as techname 
+		$sql = "select case when title='' then concat(firstname,' ',lastname) when title<>'' then concat(firstname,' ',lastname,', ',title) end as techname
 			from mast_employee where id=$techid";
 		$row = getRow($sql);
 		$return = "";
@@ -558,8 +558,8 @@ if (strpos($script,"print")!==false) 	require("footerheaderprt.php");
 		include("../$print.php");
 		$content = ob_get_clean();
 		require_once($path."html2pdf.class.php");
-		try {	
-			$width_in_mm = 8.4 * 25.4; 
+		try {
+			$width_in_mm = 8.4 * 25.4;
 			$height_in_mm = 11.7 * 25.4;
 			$html2pdf = new HTML2PDF('P',  array($width_in_mm,$height_in_mm), 'en', true, 'UTF-8', array(3, 3, 3,3));
 			$html2pdf->writeHTML($content, isset($_GET['vuehtml']));
@@ -571,13 +571,13 @@ if (strpos($script,"print")!==false) 	require("footerheaderprt.php");
 			exit;
 		}
 	}
-	
+
 	//--------------------------------------------------------------------------------------------
 	// LOGIN AN USER
 	//--------------------------------------------------------------------------------------------
 	function login($login_username,$login_password,$usertype) {
 		global $loginURL,$defURL;
-		
+
 		if ($login_username!="" && $login_password!="") {
 			$login_username = strtolower($login_username);
 			if ($usertype=="Main")
@@ -593,16 +593,16 @@ if (strpos($script,"print")!==false) 	require("footerheaderprt.php");
 				saveLog("login","","Log In");
 				header("location: $defURL");
 			} else
-				alertNew ("Invalid username/password!",$loginURL); 
+				alertNew ("Invalid username/password!",$loginURL);
 		} else
-			alertNew ("Username/Password is required. Please enter again!",$loginURL); 
+			alertNew ("Username/Password is required. Please enter again!",$loginURL);
 	}
 	//--------------------------------------------------------------------------------------------
 	// LOGOUT AN USER
 	//--------------------------------------------------------------------------------------------
 	function logout() {
 		global $loginURL;
-		
+
 		saveLog("logout","","Logout");
 		session_destroy();
 		alertNew("You have successfully signed out.",$loginURL);
@@ -614,7 +614,7 @@ if (strpos($script,"print")!==false) 	require("footerheaderprt.php");
 		global $userinfo,$idno,$txtaction,$dtSave;
 		global $db,$conn;
 
-		// Save log file	
+		// Save log file
 		$query = str_replace("'","`",$query);
 		$sess_username = initSession("sess_username");
 		$sess_usertype = initSession("sess_usertype");
@@ -659,12 +659,12 @@ if (strpos($script,"print")!==false) 	require("footerheaderprt.php");
 	define('GPWD', 'p@ssw0rd'); // Gmail password
 	define('AdminEmail', 'NTCGroup-noreply@ntc.gov.ph'); // Default email for admin
 	define('AdminName', 'NTC Group'); // Default email name
-	
+
 	//require 'phpmailer/class.phpmailer.php';
 	//require 'phpmailer/class.smtp.php';
-	function sendmail($to, $subject, $body, $from=AdminEmail, $from_name=AdminName) { 
+	function sendmail($to, $subject, $body, $from=AdminEmail, $from_name=AdminName) {
 		global $error;
-		
+
 		include("../phpmailer/class.phpmailer.php");
 		$mail = new PHPMailer();  // create a new object
 		$mail->IsSMTP(); // enable SMTP
@@ -672,15 +672,15 @@ if (strpos($script,"print")!==false) 	require("footerheaderprt.php");
 		$mail->SMTPAuth = true;  // authentication enabled
 		$mail->SMTPSecure = 'ssl'; // secure transfer enabled REQUIRED for Gmail
 		$mail->Host = 'smtp.gmail.com';
-		$mail->Port = 465; 
-		$mail->Username = GUSER;  
-		$mail->Password = GPWD;           
+		$mail->Port = 465;
+		$mail->Username = GUSER;
+		$mail->Password = GPWD;
 		$mail->SetFrom($from, $from_name);
 		$mail->Subject = $subject;
 		$mail->Body = $body;
 		$mail->AddAddress($to);
 		if(!$mail->Send()) {
-			$error = 'Mail error: '.$mail->ErrorInfo; 
+			$error = 'Mail error: '.$mail->ErrorInfo;
 			return false;
 		} else {
 			$error = 'Message sent!';
@@ -738,10 +738,10 @@ if (strpos($script,"print")!==false) 	require("footerheaderprt.php");
 			$tblUsers = "mast_patient";
 			$sql = "select id,concat(firstname,' ',lastname) as fullname,'Patient' as position,a.patientcode as usercode from $tblUsers where username='$sess_username'";
 		}
-		$sess_userid = initSession("sess_userid");		
+		$sess_userid = initSession("sess_userid");
 		if ($sess_userid == "")	{
 			$userinfo = "";
-			$userinfo['username'] = $sess_username; 
+			$userinfo['username'] = $sess_username;
 			if ($row = getRow($sql)) {
 				$userinfo['userid'] = $row['id'];
 				$userinfo['fullname'] = $row['fullname'];
@@ -795,7 +795,7 @@ if (strpos($script,"print")!==false) 	require("footerheaderprt.php");
 		return (is_array($row)) ? 1 : 0;
 	}
 	//--------------------------------------------------------------------------------------------
-	// GET LAST ID 
+	// GET LAST ID
 	//--------------------------------------------------------------------------------------------
 	function getLastID($table,$condition='',$dbtype=0) {
 		$where = ($condition=="") ? "" : " where $condition";
@@ -809,11 +809,11 @@ if (strpos($script,"print")!==false) 	require("footerheaderprt.php");
 	function getConn($host,$dbid,$dbpwd,$db){
 		return mysqli_connect($host,$dbid,$dbpwd,$db);
 	}
-	
+
 	// GET SPECIFIC FIELD VALUE FROM TABLE
 	//--------------------------------------------------------------------------------------------
 	function getVal($table,$condition,$fld,$dbtype=0){
-		if ($condition=="id=")  
+		if ($condition=="id=")
 			return "";
 		else {
 			$sql = "select $fld as fld from $table where $condition order by id desc";
@@ -847,7 +847,7 @@ if (strpos($script,"print")!==false) 	require("footerheaderprt.php");
 			$selected = ($row['id']==$val) ? "selected" : "";
 			$fullname = $row['firstname'];
 			$fullname.= ($row['middlename']!="") ? " ".substr($row['middlename'],0,1).". ".$row['lastname'] : " ".$row['lastname'];
-			$fullname.= ($row['title']!="") ? ", ".$row['title'] : ""; 
+			$fullname.= ($row['title']!="") ? ", ".$row['title'] : "";
 			//$var = $row['fullname'].", ".$row['title'];
 			//$row['title'] == "" ? $var  = str_replace(',', '', $var) : "";
 			echo"<option value='".$id."' $selected>".$fullname."</option>";
@@ -859,7 +859,7 @@ if (strpos($script,"print")!==false) 	require("footerheaderprt.php");
 	function getArray($result){
 		global $conn;
 		return mysqli_fetch_array($result);
-	}	
+	}
 	//--------------------------------------------------------------------------------------------
 	//	GET ROW FROM DATABASE (0=$ntc_backoffice_db / 1=$ntc_public_db / 2=$ntc_igov_db)
 	//--------------------------------------------------------------------------------------------
@@ -898,7 +898,7 @@ if (strpos($script,"print")!==false) 	require("footerheaderprt.php");
 // FORMAT FUNCTIONS
 /*==========================================================================================*/
 	//--------------------------------------------------------------------------------------------
-	// FORMAT DATE/TIME ($TYPE: 0=SAVE / 1=DISPLAY :: $KIND: 0=DATE / 1=DATETIME) 
+	// FORMAT DATE/TIME ($TYPE: 0=SAVE / 1=DISPLAY :: $KIND: 0=DATE / 1=DATETIME)
 	//--------------------------------------------------------------------------------------------
 	function formatDate($val,$type=0,$kind=0) {
 		if ($val=="" || $val=="0000-00-00") {
@@ -909,7 +909,7 @@ if (strpos($script,"print")!==false) 	require("footerheaderprt.php");
 		} else {
 			$time = ($kind==0) ? "" : " H:i:s";
 			if ($type==0) {
-				return date("m/d/Y".$time,strtotime($val));	
+				return date("m/d/Y".$time,strtotime($val));
 			} elseif ($type==1) {
 				return date("F d, Y".$time,strtotime($val));
 			} elseif ($type==2) {
@@ -923,19 +923,19 @@ if (strpos($script,"print")!==false) 	require("footerheaderprt.php");
 			}  elseif ($type==6){
 				return date("l(d)".$time,strtotime($val));
 			}  elseif ($type==7){
-				return date("Y/m/d".$time,strtotime($val));	
+				return date("Y/m/d".$time,strtotime($val));
 			}  elseif ($type==8){
-				return date("d/m/Y".$time,strtotime($val));	
+				return date("d/m/Y".$time,strtotime($val));
 			}  elseif ($type==9){
-				return date("F".$time,strtotime($val));	
+				return date("F".$time,strtotime($val));
 			}  elseif ($type==10){
-				return date("mdy".$time,strtotime($val));	
+				return date("mdy".$time,strtotime($val));
 			}  elseif ($type==11){
-				return date("d M Y".$time,strtotime($val));	
+				return date("d M Y".$time,strtotime($val));
 			}  elseif ($type==12){
-				return date("d F Y".$time,strtotime($val));	
+				return date("d F Y".$time,strtotime($val));
 			}  elseif ($type==13){
-				return date("M/d/Y".$time,strtotime($val));	
+				return date("M/d/Y".$time,strtotime($val));
 			}
 		}
 	}
@@ -1045,20 +1045,20 @@ if (strpos($script,"print")!==false) 	require("footerheaderprt.php");
 	//--------------------------------------------------------------------------------------------
 	// NAVIGATIONAL PANEL WITH PAGES AND PREVIOUS/NEXT LINKS
 	//--------------------------------------------------------------------------------------------
-	function navpanel($dbtable,$condition,$sort,$recordLimit,$thisOffset,$param,$module='') 
+	function navpanel($dbtable,$condition,$sort,$recordLimit,$thisOffset,$param,$module='')
 	{
 		global $action,$offset,$key,$PHP_SELF,$sql,$qstring;
 		global $pos,$pos2,$param0,$lastpage,$ntc_backoffice_db;
-		
+
 		$fontfamily = "Arial, Helvetica";
 		$fontsize	= "13 px";
 		$fontcolor	= "#000000";
 		$inactivecolor = "#CCCCCC";	// Color for when there is no link
 		$fontweight	= "700";
 		$textdecoration = "none";
-		
-		if (!isset($thisOffset) || $thisOffset < 0) $thisOffset=0; 
-	
+
+		if (!isset($thisOffset) || $thisOffset < 0) $thisOffset=0;
+
 		$sql="select * from $dbtable";
 		if ($condition != "") { $sql.=" where $condition"; }
 		$sql.=" order by $sort";
@@ -1068,15 +1068,15 @@ if (strpos($script,"print")!==false) 	require("footerheaderprt.php");
 		$getTotalRows = $row[0];
 		$totalRowsNum = getcount($dbtable,$condition);
 		//	$totalRowsNum = mysql_num_rows($getTotalRows);
-		
+
 		$sql.=" limit $thisOffset,$recordLimit";
 		//echo $sql;exit;
 		if ($totalRowsNum != $recordLimit) {
 			$totalPages = intval($totalRowsNum/$recordLimit);
 			if ($totalPages==0) { return $sql; exit; }
-			if ($totalRowsNum%$recordLimit) $totalPages++; 
-			if ($thisOffset!=0) { 
-				$prevOffset = intval($thisOffset-$recordLimit); 
+			if ($totalRowsNum%$recordLimit) $totalPages++;
+			if ($thisOffset!=0) {
+				$prevOffset = intval($thisOffset-$recordLimit);
 				// REPLACE thisOffset & lineIndex
 				if (strpos($qstring,"thisOffset")=="") {
 					$param = str_replace("?&","?","$qstring&thisOffset=$prevOffset&lineIndex=$prevOffset");
@@ -1086,25 +1086,25 @@ if (strpos($script,"print")!==false) 	require("footerheaderprt.php");
 					$pos2 = strpos($qstring,"&",$pos);
 					$param = substr_replace($qstring,$prevOffset,$pos+11,$pos2-11-$pos);
 					$param0 = substr_replace($qstring,0,$pos+11,$pos2-11-$pos);
-					
+
 					$pos = strpos($param,"lineIndex=");
 					$pos2 = strpos($param,"=",$pos);
-					$param = substr_replace($param,$prevOffset,$pos+10,$pos2+1);		
+					$param = substr_replace($param,$prevOffset,$pos+10,$pos2+1);
 					$param0 = substr_replace($param0,0,$pos+10,$pos2+1);
 				}
 				// END OF REPLACE
 				echo "<input type='button' name='First' value='<< First' style='font=10 px' onclick=\"location='$PHP_SELF?$param0'\"> ";
 				echo "<input type='button' name='Prev' value='< Prev' style='font=10 px' onclick=\"location='$PHP_SELF?$param'\">";
-			} elseif ($totalPages>1)	{ 
+			} elseif ($totalPages>1)	{
 				echo "<input type='button' name='First' value='<< First' style='font=10 px' onclick=\"location='$PHP_SELF?$param0'\" disabled> ";
 				echo "<input type='button' name='Prev' value='< Prev' style='font=10 px' onclick=\"location='$PHP_SELF?$param'\" disabled>";
 			}
 		}
-	
+
 		echo "&nbsp;&nbsp;&nbsp;&nbsp;<font face=$fontfamily size='2' color=$fontcolor><b>Page&nbsp;&nbsp;</b>"
 			.(intval($thisOffset/$recordLimit)+1)
 			."&nbsp;&nbsp;<b>of</b>&nbsp;&nbsp;$totalPages</font>&nbsp;&nbsp;&nbsp;&nbsp;";
-		
+
 		if (!(intval(((intval($thisOffset/$recordLimit))+1))==$totalPages) && $totalPages>1) {
 			$nextOffset = intval($thisOffset+$recordLimit);
 			// REPLACE thisOffset & lineIndex
@@ -1117,42 +1117,42 @@ if (strpos($script,"print")!==false) 	require("footerheaderprt.php");
 				$pos2 = strpos($qstring,"&",$pos);
 				$param = substr_replace($qstring,$nextOffset,$pos+11,$pos2-11-$pos);
 				$param0 = substr_replace($qstring,$lastpage,$pos+11,$pos2-11-$pos);
-				
+
 				$pos = strpos($param,"lineIndex=");
 				$pos2 = strpos($param,"=",$pos);
-				$param = substr_replace($param,$nextOffset,$pos+10,$pos2+1);					
+				$param = substr_replace($param,$nextOffset,$pos+10,$pos2+1);
 				$param0 = substr_replace($param0,$lastpage,$pos+10,$pos2+1);
 			}
 			// END OF REPLACE
-			
+
 			if ($module=="") {
-				echo "<input type='button' name='Next' value='Next >' style='font=10 px' onclick=\"location='$PHP_SELF?$param'\"> ";	
+				echo "<input type='button' name='Next' value='Next >' style='font=10 px' onclick=\"location='$PHP_SELF?$param'\"> ";
 				echo "<input type='button' name='Last' value='Last >>' style='font=10 px' onclick=\"location='$PHP_SELF?$param0'\">";
 			} else {
 				echo "<a href='index.php?module=$module&action=index$PHP_SELF$param0'><img src='themes/images/start_disabled.gif' border='0' align='absmiddle'></a>";
 				echo "<a href='index.php?module=$module&action=index$PHP_SELF$param'><img src='themes/images/previous_disabled.gif' border='0' align='absmiddle'></a>";
 			}
-			
+
 		}	elseif ($totalPages>1) {
 			if ($module=="") {
 				echo "<input type='button' name='Next' value='Next >' style='font=10 px' onclick=\"location='$PHP_SELF?$param'\" disabled>";
 				echo "<input type='button' name='Last' value='Last >>' style='font=10 px' onclick=\"location='$PHP_SELF?$param0'\" disabled>";
 			} else {
 				echo "<img src='themes/images/start_disabled.gif' border='0' align='absmiddle'>";
-				echo "<img src='themes/images/previous_disabled.gif' border='0' align='absmiddle'>";				
+				echo "<img src='themes/images/previous_disabled.gif' border='0' align='absmiddle'>";
 			}
 		}
 		//echo "test2:".$sql;exit;
 		return $sql;
 	}
 	//--------------------------------------------------------------------------------------------
-	// COMPUTE SUBTOTAL 
+	// COMPUTE SUBTOTAL
 	//--------------------------------------------------------------------------------------------
 	function getSubtotal($fee,$qty){
 		return $fee * $qty;
 	}
 	//--------------------------------------------------------------------------------------------
-	// COMPUTE TOTAL 
+	// COMPUTE TOTAL
 	//--------------------------------------------------------------------------------------------
 	function getTotal($arrVal,$stamp,$qty,$countVal){
 		for($i=0; $i<$countVal; $i++){
@@ -1171,22 +1171,22 @@ if (strpos($script,"print")!==false) 	require("footerheaderprt.php");
 					$y++;
 			} elseif ($m == 0 && date('d') - date('d', $dob) < 0) {
 					$y++;
-			}  
-			return date('Y') - $y; 
+			}
+			return date('Y') - $y;
 	}
 	//--------------------------------------------------------------------------------------------
 	// GET PREVIOUS YEAR
 	//--------------------------------------------------------------------------------------------
 	function getPrevYear(){
-		return date('Y') - 1;	
-	}	
+		return date('Y') - 1;
+	}
 	//--------------------------------------------------------------------------------------------
 	//	GET EXPIRATION DATE - PLUS 6 MONTHS
 	//--------------------------------------------------------------------------------------------
 	function getExpiredDate(){
 		global $dateSave;
 		return date('Y-m-d', strtotime('+6 month', strtotime($dateSave)));
-	}	
+	}
 	//--------------------------------------------------------------------------------------------
 	//	CONVERT AMOUNT IN NUMBER TO WORDS
 	//--------------------------------------------------------------------------------------------
@@ -1234,7 +1234,7 @@ if (strpos($script,"print")!==false) 	require("footerheaderprt.php");
 			1000000000000000    => 'Quadrillion',
 			1000000000000000000 => 'Quintillion'
 		);
-	
+
 		if (!is_numeric($number)) {
 			return false;
 		}
@@ -1288,7 +1288,7 @@ if (strpos($script,"print")!==false) 	require("footerheaderprt.php");
 				 $string .= convert_number_to_words($fraction) . $centavos ;
 			}
 		return $string ;
-	}	
+	}
 	//--------------------------------------------------------------------------------------------
 	// CHECK EMPTY VALUE
 	//--------------------------------------------------------------------------------------------
@@ -1304,7 +1304,7 @@ if (strpos($script,"print")!==false) 	require("footerheaderprt.php");
 		$val = str_replace("'null'","null",$val);
 		echo date("m/d/Y H:i:s")." >  ".$val; exit;
 	}
-	
+
 
 /*==========================================================================================*/
 // PHP TRANSLATED SCRIPT FOR JAVASCRIPT FUNCTIONS

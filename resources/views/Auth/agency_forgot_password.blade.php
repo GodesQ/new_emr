@@ -11,39 +11,38 @@
     <meta name="keywords"
         content="admin template, stack admin template, dashboard template, flat admin template, responsive admin template, web app" />
     <meta name="author" content="PIXINVENT" />
-    <title>Merita - Dashboard</title>
+    <title>GOMEDICAL - AGENCY FORGOT PASSWORD</title>
     <link rel="apple-touch-icon" href="../../../app-assets/images/logo/medical_logo_icon.png" />
     <link rel="shortcut icon" type="image/x-icon" href="../../../app-assets/images/logo/medical_logo_icon.png" />
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i%7COpen+Sans:300,300i,400,400i,600,600i,700,700i"
         rel="stylesheet" />
 
     <!-- BEGIN: Vendor CSS-->
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/vendors.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/forms/icheck/icheck.css" />
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/forms/icheck/custom.css" />
+    <link rel="stylesheet" type="text/css" href="{{ URL::asset('app-assets/vendors/css/vendors.min.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ URL::asset('app-assets/vendors/css/forms/icheck/icheck.css"') }} />
+    <link rel="stylesheet" type="text/css" href="{{ URL::asset('app-assets/vendors/css/forms/icheck/custom.css') }}" />
     <!-- END: Vendor CSS-->
 
     <!-- BEGIN: Theme CSS-->
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/bootstrap.css" />
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/bootstrap-extended.css" />
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/colors.css" />
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/components.css" />
+    <link rel="stylesheet" type="text/css" href="{{ URL::asset('app-assets/css/bootstrap.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ URL::asset('app-assets/css/bootstrap-extended.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ URL::asset('app-assets/css/colors.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ URL::asset('app-assets/css/components.css') }}" />
     <!-- END: Theme CSS-->
 
     <!-- BEGIN: Page CSS-->
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/core/menu/menu-types/vertical-menu.css" />
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/core/colors/palette-gradient.css" />
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/pages/login-register.css" />
+    <link rel="stylesheet" type="text/css" href="{{ URL::asset('app-assets/css/core/menu/menu-types/vertical-menu.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ URL::asset('app-assets/css/core/colors/palette-gradient.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ URL::asset('app-assets/css/pages/login-register.css') }}" />
     <!-- END: Page CSS-->
 
     <!-- BEGIN: Custom CSS-->
-    <link rel="stylesheet" type="text/css" href="../../../assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="{{ URL::asset('assets/css/style.css') }}" />
     <!-- END: Custom CSS-->
 </head>
 <!-- END: Head-->
 
 <!-- BEGIN: Body-->
-
 <body class="vertical-layout vertical-menu 1-column bg-full-screen-image blank-page blank-page" data-open="click"
     data-menu="vertical-menu" data-col="1-column">
     <!-- BEGIN: Content-->

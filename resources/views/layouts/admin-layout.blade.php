@@ -21,20 +21,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/calendars/fullcalendar.min.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/calendars/daygrid.min.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/calendars/timegrid.min.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/plugins/calendars/fullcalendar.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/plugins/file-uploaders/dropzone.css">
-        <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/forms/toggle/switchery.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ URL::asset('app-assets/vendors/css/calendars/fullcalendar.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ URL::asset('app-assets/vendors/css/calendars/daygrid.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ URL::asset('app-assets/vendors/css/calendars/timegrid.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ URL::asset('app-assets/css/plugins/calendars/fullcalendar.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ URL::asset('app-assets/css/plugins/file-uploaders/dropzone.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ URL::asset('app-assets/vendors/css/forms/toggle/switchery.min.css') }}">
     <!-- BEGIN: Vendor CSS-->
-    <link rel="stylesheet" type="text/css" href="{{asset('app-assets/vendors/css/vendors.css')}}">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/pages/app-invoice.css">
-    <link rel="stylesheet" href="{{asset('app-assets/css/all.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ URL::asset('app-assets/vendors/css/vendors.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ URL::asset('app-assets/css/pages/app-invoice.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('app-assets/css/all.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css">
     <!-- END: Vendor CSS-->
     <!-- BEGIN: Custom CSS-->
-    <link rel="stylesheet" type="text/css" href="../../../assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="{{ URL::asset('assets/css/style.css') }}">
     <!-- END: Custom CSS-->
 
 </head>
@@ -215,7 +215,7 @@
     <footer class="footer footer-static footer-light navbar-shadow">
         <p class="clearfix blue-grey lighten-2 text-sm-center mb-0 px-2 container center-layout">
             <span class="float-md-left d-block d-md-inline-block">Copyright &copy; 2022
-                <a class="text-bold-800 grey darken-2" href="https://meritaclinic.ph" target="_blank">Merita Diagnostics Clinic, Inc </a>
+                <a class="text-bold-800 grey darken-2" href="https://gomedical.godesqsites.com/" target="_blank">GOMEDICAL EMR</a>
             </span>
             <span class="float-md-right d-none d-lg-block">Designed & Developed by:
                 <a href="https://godesq.com/" target="_blank">GodesQ Digital Marketing Services</a>

@@ -144,7 +144,7 @@
                     <tr>
                         <td bgcolor="#ffffff" align="center"
                             style="padding: 0px 30px 40px 30px; border-radius: 0px 0px 4px 4px; color: #666666; font-family: 'Google Sans', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 25px;">
-                            <p style="margin: 0;">Regards,<br>Merita Diagnostic Clinic </p>
+                            <p style="margin: 0;">Regards,<br>GOMEDICAL EMR</p>
                         </td>
                     </tr>
                 </table>
@@ -174,8 +174,7 @@
                             style="padding: 0px 30px 30px 30px; color: #666666; font-family: 'Google Sans', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; line-height: 18px;">
                             <br>
                             <p style="margin: 0;">Powered by: <a href="https://meritaclinic.ph/" target="_blank"
-                                    style="color: #44b8a1; font-weight: 700;"><strong>Merita Diagnostic
-                                        Clinic</strong></a>.</p>
+                                    style="color: #44b8a1; font-weight: 700;"><strong>GOMEDICAL EMR</strong></a>.</p>
                         </td>
                     </tr>
                 </table>

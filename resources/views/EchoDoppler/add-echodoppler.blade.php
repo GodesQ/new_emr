@@ -87,7 +87,7 @@
                                     <tr>
                                         <td width="18%" align="left"><b>Clinical Diagnostic</b></td>
                                         <td colspan="7" align="left"><input name="clinical_diagnostic" type="text"
-                                                id="clinical_diagnostic" value="Merita Diagnostic Clinic, Inc."
+                                                id="clinical_diagnostic" value="GOMEDICAL Diagnostic Clinic, Inc."
                                                 class="form-control"></td>
                                     </tr>
                                     <tr>

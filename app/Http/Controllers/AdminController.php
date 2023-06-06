@@ -611,9 +611,13 @@ class AdminController extends Controller
         $latestEmployee = User::select('*')
             ->latest('employeecode')
             ->first();
-        $lastEmployeeCode = substr($latestEmployee->employeecode, 4);
-        $latestEmployeeCode = $lastEmployeeCode + 1;
-        $employeeCode = 'E' . date('y') . '-0000' . $latestEmployeeCode;
+        if($latestEmployee) {
+            $lastEmployeeCode = substr($latestEmployee->employeecode, 4);
+            $latestEmployeeCode = $lastEmployeeCode + 1;
+            $employeeCode = 'E' . date('y') . '-0000' . $latestEmployeeCode;
+        } else {
+            $employeeCode = 'E' . date('y') . '-0000' . 1;
+        }
         $departments = Department::all();
         return view('Employee.add-employee', compact('employeeCode', 'departments', 'data'));
     }
@@ -624,7 +628,7 @@ class AdminController extends Controller
         $request->validate([
             'firstname' => 'required',
             'lastname' => 'required',
-            'email' => 'required|email|unique:mast_employee',
+            'email' => 'required|email|unique:mast_employee,email',
         ]);
 
         $name = null;

@@ -32974,7 +32974,7 @@ html body.boxed-layout {
 }
 
 html body.bg-full-screen-image {
-    background: url(../../app-assets/images/backgrounds/medical-bg.jpg) no-repeat center fixed;
+    background: url(../../app-assets/images/backgrounds/medical-bg.png) no-repeat center fixed;
     background-size: cover;
 }
 

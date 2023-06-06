@@ -223,7 +223,7 @@ class ReferralController extends Controller
             $refferal->created_date = date('Y-m-d');
             $save = $refferal->save();
 
-            $to_emails = [$request->email_employee, env('APP_EMAIL'), 'mdcinc2019@gmail.com', 'meritadiagnosticclinic@yahoo.com', session()->get('email'), env('RECEPTION_EMAIL')];
+            $to_emails = [$request->email_employee];
 
             $refferal_data = DB::table('refferal')
                 ->select(

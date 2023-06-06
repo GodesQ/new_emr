@@ -177,7 +177,7 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label class="text-bold-600" for="projectinput1">Last Medical in Merita</label>
+                                <label class="text-bold-600" for="projectinput1">Last Medical in GOMEDICAL</label>
                                 <input type="text" id="projectinput1" class="form-control" value="{{ $patientCode->last_medical }}" name="last_medical">
                             </div>
                         </div>

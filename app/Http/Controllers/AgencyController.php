@@ -370,11 +370,12 @@ class AgencyController extends Controller
                 $bodyMessage = '';
 
                 $details = [
-                    'title' => 'Verification Email From Merita',
+                    'title' => 'Verification Email From GOMEDICAL',
                     'body' => $bodyMessage,
                     'email' => $request->email,
                     'password' => $password,
                 ];
+
                 Mail::to($request->email)->send(new AgencyPassword($details));
                 return redirect('/agencies')->with('status', 'Agency Added Successfully');
             } else {

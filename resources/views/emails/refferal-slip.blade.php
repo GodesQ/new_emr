@@ -95,7 +95,7 @@
                     <tr>
                         <td bgcolor="#ffffff" align="center" valign="top"
                             style="padding: 20px 20px 0px 20px; border-radius: 4px 4px 0px 0px; color: #111111; font-family: 'Google Sans', Helvetica, Arial, sans-serif; font-size: 3px; font-weight: 400; letter-spacing: 4px; line-height: 48px;">
-                            <img src=" https://meritaclinic.ph/wp-content/uploads/2022/03/Merita-Logo.png" width="125"
+                            <img src="https://gomedical.godesqsites.com/app-assets/images/logo/medical_logo.png" width="125"
                                 height="120" style="display: block; border: 0px;" />
                             <h1 style="font-size: 32px; font-weight: 800; margin-bottom: 0;">REFERRAL SLIP</h1>
                         </td>
@@ -414,7 +414,7 @@
                     <tr>
                         <td bgcolor="#ffffff" align="center"
                             style="padding: 0px 30px 40px 30px; border-radius: 0px 0px 4px 4px; color: #666666; font-family: 'Google Sans', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 25px;">
-                            <p style="margin: 0;">Regards,<br>Merita Diagnostic Clinic </p>
+                            <p style="margin: 0;">Regards,<br>GOMEDICAL EMR</p>
                             <p style="margin: 0;">5th and 6th Floor JETTAC Building, 920 Pres. Quirino Ave., cor. San Antonio St., Brgy 689 Malate Manila</p>
                         </td>
                     </tr>
@@ -445,8 +445,7 @@
                             style="padding: 0px 30px 30px 30px; color: #666666; font-family: 'Google Sans', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; line-height: 18px;">
                             <br>
                             <p style="margin: 0;">Powered by: <a href="https://meritaclinic.ph/" target="_blank"
-                                    style="color: #44b8a1; font-weight: 700;"><strong>Merita Diagnostic
-                                        Clinic</strong></a>.</p>
+                                    style="color: #44b8a1; font-weight: 700;"><strong>GOMEDICAL EMR</strong></a>.</p>
                         </td>
                     </tr>
                 </table>

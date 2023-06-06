@@ -168,7 +168,7 @@
                                                         <div class="modal-body">
                                                             <h5><b><u>Acceptance of the Terms of Use</u></b></h5>
                                                             <p style="line-height: 25px;">These terms of use are
-                                                                entered into by and between You and MERITA DIAGNOSTIC
+                                                                entered into by and between You and GOMEDICAL DIAGNOSTIC
                                                                 CLINIC.
                                                                 The following terms and conditions, together with any
                                                                 documents they expressly incorporate by reference
@@ -306,15 +306,15 @@
                                                 <div class="modal-dialog modal-lg" role="document">
                                                     <div class="modal-content">
                                                         <div class="modal-body">
-                                                            <h4>MERITA DIAGNOSTIC CLINIC INC.</h4>
+                                                            <h4>GOMEDICAL DIAGNOSTIC CLINIC INC.</h4>
                                                             <h5 class="mt-3">DATA PRIVACY CONSENT</h5>
                                                             <p class="my-1">In compliance with the Data Privacy Act
                                                                 (DPA) of 2012, and its Implementing Rules and
                                                                 Regulations (IRR)
-                                                                effective since September 8, 2016, I allow The Merita
+                                                                effective since September 8, 2016, I allow The GOMEDICAL
                                                                 Diagnostic Clinic Inc. to process my data for overseas
                                                                 employment compliance.</p>
-                                                            <p class="my-1">As such, I agree and authorize Merita
+                                                            <p class="my-1">As such, I agree and authorize GOMEDICAL
                                                                 Diagnostic Clinic Inc. to:</p>
                                                             <div class="container">
                                                                 <ol>
@@ -323,7 +323,7 @@
                                                                         my policy (ies).</li>
                                                                     <li>Retain my information for a period of five (5)
                                                                         years from the date of termination of my policy,
-                                                                        or at such time that I submit to Merita
+                                                                        or at such time that I submit to GOMEDICAL
                                                                         Diagnostic Clinic Inc.,
                                                                         a written cancellation of this consent,
                                                                         whichever is earlier.
@@ -345,7 +345,7 @@
                                                                         I also acknowledge and warrant that I have
                                                                         acquired the consent from all parties relevant
                                                                         to this consent
-                                                                        and hold free and harmless and indemnify Merita
+                                                                        and hold free and harmless and indemnify GOMEDICAL
                                                                         Diagnostic Clinic Inc.
                                                                         from any complaint, suit, or damages which any
                                                                         party may file or claim in relation to my
@@ -353,7 +353,7 @@
                                                                 </ol>
                                                             </div>
                                                             <p>I have read and understand the information provided in
-                                                                this Patient Data Protection Consent for Merita
+                                                                this Patient Data Protection Consent for GOMEDICAL
                                                                 Diagnostic Clinic Inc.,
                                                                 have had any questions about it answered, and hereby
                                                                 voluntarily provide my express consent to the
@@ -361,7 +361,7 @@
                                                                 Personal Data
                                                                 (including medical information and sensitive data) as
                                                                 described in this Patient Data Protection Consent for
-                                                                Merita Diagnostic Clinic Inc.</p>
+                                                                GOMEDICAL Diagnostic Clinic Inc.</p>
                                                         </div>
                                                         <div class="modal-footer">
                                                             <button type="button"
@@ -373,7 +373,7 @@
                                             </div>
                                             <p
                                                 class="card-subtitle line-on-side text-muted text-center font-small-3 mx-2 mt-3">
-                                                <span>Have an account in Merita ?</span>
+                                                <span>Have an account in GOMEDICAL ?</span>
                                             </p>
                                             <div class="card-body">
                                                 <a href="/" class="loginbtn"> Click Here To Login Now</a>

@@ -27,10 +27,10 @@ class Support extends Mailable
      * @return $this
      */
     public function build()
-    {   
+    {
         $data = $this->data;
         $image = public_path('/app-assets/images/support/' . $data['ss_issue']);
-        return $this->subject('Support Email from Merita!')
+        return $this->subject('Support Email from GOMEDICAL!')
         ->view('emails.support', compact('data'))
         ->attach($image);
     }

@@ -94,7 +94,7 @@
                     <tr>
                         <td bgcolor="#ffffff" align="center" valign="top"
                             style="padding: 20px 20px 0px 20px; border-radius: 4px 4px 0px 0px; color: #111111; font-family: 'Google Sans', Helvetica, Arial, sans-serif; font-size: 3px; font-weight: 400; letter-spacing: 4px; line-height: 48px;">
-                            <img src=" https://meritaclinic.ph/wp-content/uploads/2022/03/Merita-Logo.png" width="125"
+                            <img src="https://gomedical.godesqsites.com/app-assets/images/logo/medical_logo.png" width="125"
                                 height="120" style="display: block; border: 0px;" />
                             <h1 style="font-size: 32px; font-weight: 800; margin-bottom: 0;">LAB RESULT STATUS</h1>
                         </td>
@@ -127,18 +127,18 @@
                                                     <div style="margin-bottom: 1rem;">
                                                         <div><b>Dear {{$patient->firstname}} {{$patient->lastname}},</b></div> <br>
                                                         <div>
-                                                            I am writing to inform you that we have reviewed your recent lab exams, and as a result, we need to reset your medical status at our Merita Diagnostic Clinic. We understand that this may come as a surprise to you, and we apologize for any inconvenience this may cause.
+                                                            I am writing to inform you that we have reviewed your recent lab exams, and as a result, we need to reset your medical status at our GOMEDICAL Diagnostic Clinic. We understand that this may come as a surprise to you, and we apologize for any inconvenience this may cause.
                                                             <br><br>
                                                             At our clinic, we strive to provide the highest level of care to all our patients, and that includes ensuring that your medical record is accurate and up-to-date. Based on the results of your lab exams, we have determined that your medical status needs to be updated to reflect your current health condition.
                                                             <br><br>
                                                             We understand that this may be concerning for you, and we are here to support you every step of the way. If you have any questions or concerns about your new medical status or any other aspect of your care, please do not hesitate to contact us. Our team of healthcare professionals is always available to assist you.
                                                             <br><br>
-                                                            We value your trust in us and thank you for choosing Merita Diagnostic Clinic for your healthcare needs. We are committed to providing you with the best possible care, and we look forward to continuing to serve you.
+                                                            We value your trust in us and thank you for choosing GOMEDICAL Diagnostic Clinic for your healthcare needs. We are committed to providing you with the best possible care, and we look forward to continuing to serve you.
                                                         </div> <br><br>
                                                         <div>
                                                             Sincerely,
                                                             <br>
-                                                            Merita Diagnostic Clinic
+                                                            GOMEDICAL Diagnostic Clinic
                                                         </div>
                                                     </div>
                                                 </td>
@@ -160,7 +160,7 @@
                     <tr>
                         <td bgcolor="#ffffff" align="center"
                             style="padding: 0px 30px 40px 30px; border-radius: 0px 0px 4px 4px; color: #666666; font-family: 'Google Sans', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 25px;">
-                            <p style="margin: 0;">Regards,<br>Merita Diagnostic Clinic </p>
+                            <p style="margin: 0;">Regards,<br>GOMEDICAL EMR</p>
                         </td>
                     </tr>
                 </table>
@@ -174,7 +174,7 @@
                             style="padding: 30px 30px 30px 30px; border-radius: 4px 4px 4px 4px; color: #666666; font-family: 'Google Sans', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;">
                             <h2 style="font-size: 20px; font-weight: 400; color: white; margin: 0;">Need more help?
                             </h2>
-                            <p style="margin: 0;"><a href="https://meritaclinic.ph/contact-us/" target="_blank"
+                            <p style="margin: 0;"><a href="https://GOMEDICALclinic.ph/contact-us/" target="_blank"
                                     style="color: white;">We&rsquo;re here
                                     to help you out.</a></p>
                         </td>
@@ -189,9 +189,8 @@
                         <td bgcolor="#f4f4f4" align="center"
                             style="padding: 0px 30px 30px 30px; color: #666666; font-family: 'Google Sans', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; line-height: 18px;">
                             <br>
-                            <p style="margin: 0;">Powered by: <a href="https://meritaclinic.ph/" target="_blank"
-                                    style="color: #44b8a1; font-weight: 700;"><strong>Merita Diagnostic
-                                        Clinic</strong></a>.</p>
+                            <p style="margin: 0;">Powered by: <a href="https://GOMEDICALclinic.ph/" target="_blank"
+                                    style="color: #44b8a1; font-weight: 700;"><strong>GOMEDICAL EMR</strong></a>.</p>
                         </td>
                     </tr>
                 </table>

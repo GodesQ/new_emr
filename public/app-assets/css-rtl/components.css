@@ -83,7 +83,7 @@ html body.boxed-layout {
   padding-left : 0;
 }
 html body.bg-full-screen-image {
-  background : url(../../app-assets/images/backgrounds/medical-bg.jpg) no-repeat center center fixed;
+  background : url(../../app-assets/images/backgrounds/medical-bg.png) no-repeat center center fixed;
   background-size : cover;
 }
 html body .pace .pace-progress {

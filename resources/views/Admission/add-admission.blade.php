@@ -158,7 +158,7 @@
                         </div>
                         <div class="col-md-6 my-1">
                             <div class="form-group">
-                                <label class="text-bold-600" for="projectinput1">Last Medical in Merita</label>
+                                <label class="text-bold-600" for="projectinput1">Last Medical in GOMEDICAL</label>
                                 <input type="text" id="projectinput1" class="form-control" value="" name="last_medical">
                             </div>
                         </div>

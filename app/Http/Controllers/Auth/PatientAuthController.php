@@ -84,7 +84,7 @@ class PatientAuthController extends Controller
                 $patientCode = 'P' . date('y') . '-00' . $addPatientCode;
             }
         } else {
-            $patientCode = 'P' . date('y') . '-0' . 1;
+            $patientCode = 'P' . date('y') . '-00' . 1;
         }
 
 
@@ -99,7 +99,7 @@ class PatientAuthController extends Controller
 
         if($patient) {
             $details = [
-                'title' => 'Verification email from merita',
+                'title' => 'Verification email from GOMEDICAL',
                 'email' => $request->email,
             ];
 

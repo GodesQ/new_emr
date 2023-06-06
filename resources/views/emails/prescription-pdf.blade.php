@@ -44,7 +44,7 @@
                             <tr>
                                 <td>
                                     <div style='text-align: center;'>
-                                        <h2 style="font-size: 25px; font-weight: 700; line-height: 0px;">MERITA DIAGNOSTIC CLINIC, INC </h2>
+                                        <h2 style="font-size: 25px; font-weight: 700; line-height: 0px;">GOMEDICAL DIAGNOSTIC CLINIC, INC </h2>
                                         <div>5th Flr. Jettac Bldg. 920 Pres Quirino Ave,</div>
                                         <div>Cor. San Antonio St. Malate Manila</div>
                                         <div>Tel No. (02) 310-05995 / 0917-8576-942</div>
