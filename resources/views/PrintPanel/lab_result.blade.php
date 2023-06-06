@@ -78,7 +78,7 @@
                         <table width="100%" cellpadding="0" cellspacing="0">
                             <tbody>
                                 <tr>
-                                    <td align="center" style="font-size: 25px; text-transform: uppercase;">MERITA DIAGNOSTIC CLINIC</td>
+                                    <td align="center" style="font-size: 25px; text-transform: uppercase;">GOMEDICAL DIAGNOSTIC CLINIC</td>
                                 </tr>
                             </tbody>
                         </table>

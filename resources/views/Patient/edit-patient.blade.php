@@ -1551,14 +1551,14 @@
                                     @endif
                                 @endif
                                 @if($patientCode)
-                                    @if (session()->get('dept_id') == '1' || session()->get('dept_id') == '8' || session()->get('dept_id') == '17')
+                                    {{-- @if (session()->get('dept_id') == '1' || session()->get('dept_id') == '8' || session()->get('dept_id') == '17')
                                         <li class="nav-item">
                                             <a class="nav-link d-flex text-white" id="account-pill-social" data-toggle="pill" href="#account-vertical-social" aria-expanded="false">
                                                 <i class="fa fa-print"></i>
                                                 Print Panel
                                             </a>
                                         </li>
-                                    @endif
+                                    @endif --}}
                                     <li class="nav-item">
                                         <a class="nav-link d-flex text-white" id="account-pill-connections" data-toggle="pill"
                                             onclick="window.open('/admission_print?id={{$patientCode->id}}').print()"
@@ -1569,7 +1569,7 @@
                                     </li>
                                 @endif
                                 @if (session()->get('dept_id') == '1')
-                                <li class="nav-item">
+                                {{-- <li class="nav-item">
                                     <a class="nav-link d-flex text-white" id="account-pill-connections"
                                         data-toggle="pill"
                                         onclick="window.open('/referral_pdf?email={{$patient->email}}').print()"
@@ -1577,10 +1577,10 @@
                                         <i class="fa fa-print"></i>
                                         Print Referral Slip
                                     </a>
-                                </li>
+                                </li> --}}
                                 @endif
                                 @if (session()->get('dept_id') == '1' || session()->get('dept_id') == '17' || session()->get('dept_id') == '8')
-                                <li class="nav-item">
+                                {{-- <li class="nav-item">
                                     <a class="nav-link d-flex text-white" id="account-pill-connections"
                                         data-toggle="pill"
                                         onclick="window.open('/requests_print?id={{$patientInfo->medical_package}}&patient_id={{$patient->id}}').print()"
@@ -1588,7 +1588,7 @@
                                         <i class="fa fa-print"></i>
                                         Print Requests
                                     </a>
-                                </li>
+                                </li> --}}
                                 @endif
                                 @if($patientCode && session()->get('dept_id') == '1' || session()->get('dept_id') == '3' || session()->get('dept_id') == '8')
                                 <li class="nav-item">
