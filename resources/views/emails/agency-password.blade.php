@@ -127,9 +127,9 @@
                                                         style="font-size: 13px; color: #909090; margin-bottom: 30px; display: block;">Note:
                                                         You are required to change your password on your first
                                                         login.</span>
-                                                    <a href="https://meritaclinic.app/agency-login" target="_blank"
-                                                        style="background-color: #068a8c; font-size: 15px; padding: 10px 35px; text-decoration: none; color: white; margin-top: 25px; border-radius: 5px; font-family: 'Google Sans', Helvetica, Arial, sans-serif; margin-bottom: 35px;">Login
-                                                        Now</a>
+                                                    <a href="https://gomedical.godesqsites.com/agency-login" target="_blank"
+                                                        style="background-color: #068a8c; font-size: 15px; padding: 10px 35px; text-decoration: none; color: white; margin-top: 25px; border-radius: 5px; font-family: 'Google Sans', Helvetica, Arial, sans-serif; margin-bottom: 35px;">
+                                                        Login Now</a>
                                                 </td>
                                             </tr>
                                         </table>
