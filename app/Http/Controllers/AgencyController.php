@@ -326,17 +326,21 @@ class AgencyController extends Controller
     {
         try {
             $request->validate([
-                'email' => 'required|email|unique:mast_agency',
+                'email' => 'required|email|unique:mast_agency,email',
             ]);
 
             $latestData = DB::table('mast_agency')
                 ->latest('agencycode')
                 ->first();
 
-            $lastAgencyCode = substr($latestData->agencycode, 4);
-            // new row code
-            $addAgencyCode = $lastAgencyCode + 1;
-            $agencyCode = 'A' . date('y') . '-0000' . $addAgencyCode;
+            if($latestData) {
+                $lastAgencyCode = substr($latestData->agencycode, 4);
+                // new row code
+                $addAgencyCode = $lastAgencyCode + 1;
+                $agencyCode = 'A' . date('y') . '-0000' . $addAgencyCode;
+            } else {
+                $agencyCode = 'A' . date('y') . '-0000' . 1;
+            }
 
             $password = bin2hex(random_bytes(10));
             $agency = new Agency();
@@ -379,7 +383,7 @@ class AgencyController extends Controller
         } catch (\Exception $exception) {
             $request->validate([
                 'commission' => 'numeric|required',
-                'email' => 'required|email|unique:mast_agency',
+                'email' => 'required|email|unique:mast_agency,email',
             ]);
 
             $message = $exception->getMessage();
