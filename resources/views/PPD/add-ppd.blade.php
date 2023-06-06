@@ -108,7 +108,7 @@
                                                         <td width="24%"><b>Nurse</b></td>
                                                         <td width="76%">
                                                             <div class="col-md-8">
-                                                                <select required name="technician_id" id="technician_id"
+                                                                <select  name="technician_id" id="technician_id"
                                                                     class="form-control">
                                                                     @foreach($nurses as $nurse)
                                                                         <option value={{$nurse->id}}>{{$nurse->firstname}} {{$nurse->lastname}} {{$nurse->title}}</option>
@@ -121,7 +121,7 @@
                                                         <td><b>Medical Director</b></td>
                                                         <td>
                                                             <div class="col-md-8">
-                                                                <select required name="technician2_id"
+                                                                <select  name="technician2_id"
                                                                     id="technician2_id" class="form-control">
                                                                     <option value="">--SELECT--</option>
                                                                     <option value="2" selected>Teresita F. Gonzales, MD</option>

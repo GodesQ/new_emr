@@ -57,7 +57,7 @@
                     <li class="nav-item"><a class="navbar-brand" href="/dashboard" style="display: flex; justify-content: center;"><img
                                 class="brand-logo logo-sm img-responsive" alt="stack admin"
                                 src="../../../app-assets/images/logo/medical_logo_icon.png">
-                            <h3 class="brand-text align-middle" style="color: #44b8a1; font-weight: bold;">GO <span style="color: #44b8a1;">MEDICAL</span></h3>
+                            <h3 class="brand-text align-middle" style="color: #44b8a1; font-weight: bold;">GO <span style="color: #2f505a;">MEDICAL</span></h3>
                         </a></li>
                     <li class="nav-item d-md-none"><a class="nav-link open-navbar-container" data-toggle="collapse"
                             data-target="#navbar-mobile"><i class="fa fa-ellipsis-v"></i></a></li>

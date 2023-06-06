@@ -661,44 +661,14 @@ class PrintController extends Controller
     {
 
         $id = $_GET['id'];
-        $admission = Admission::select(
-            'tran_admission.*',
-            'mast_patient.lastname as lastname',
-            'mast_patient.firstname as firstname',
-            'mast_patient.middlename as middlename',
-            'mast_patient.suffix as suffix',
-            'mast_patient.patientcode as patientcode',
-            'mast_patient.gender as gender',
-            'mast_patient.age as age',
-            'mast_patient.id as patient_id',
-            'mast_agency.agencyname as agencyname'
-            )
-            ->where('tran_admission.id', '=', $id)
-            ->leftJoin(
-                'mast_patient',
-                'mast_patient.patientcode',
-                '=',
-                'tran_admission.patientcode'
-            )
-            ->leftJoin(
-                'mast_patient',
-                'mast_patient.admission_id',
-                '=',
-                'tran_admission.id'
-            )
-            ->first();
+        $admission = Admission::where('tran_admission.id', '=', $id)->with('patient')->first();
 
-        $exam = VisualAcuity::where('admission_id', '=', $id)
-            ->latest('id')
-            ->first();
+        $exam = VisualAcuity::where('admission_id', '=', $id)->latest('id')->first();
 
         $technician1 = User::where('id', $exam->technician_id)->first();
         $technician2 = User::where('id', $exam->technician2_id)->first();
 
-        return view(
-            'PrintTemplates.exam_visacuity_print',
-            compact('exam', 'admission', 'technician1', 'technician2')
-        );
+        return view('PrintTemplates.exam_visacuity_print', compact('exam', 'admission', 'technician1', 'technician2'));
     }
 
     public function exam_xray(Request $request)

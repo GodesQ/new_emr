@@ -646,7 +646,7 @@ class AdminController extends Controller
             'firstname' => $request->firstname,
             'middlename' => $request->middlename,
             'email' => $request->email,
-            'username' => $request->middlename,
+            'username' => $request->username,
             'password' => Hash::make($request->password),
             'title' => $request->title,
             'position' => $request->position,

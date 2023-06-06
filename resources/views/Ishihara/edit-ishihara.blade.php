@@ -120,7 +120,7 @@
                                                         <td width="16%"><b>Optometrist: </b></td>
                                                         <td width="84%">
                                                             <div class="col-md-8">
-                                                                <select required name="technician_id" id="technician_id"
+                                                                <select  name="technician_id" id="technician_id"
                                                                     class="form-control">
                                                                     @foreach($optometrists as $optometrist)
                                                                         <option value={{$optometrist->id}} {{$optometrist->id == $exam->technician_id ? "selected" : null}}>{{$optometrist->firstname}} {{$optometrist->lastname}}, {{$optometrist->title}}</option>

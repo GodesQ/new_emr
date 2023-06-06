@@ -785,7 +785,7 @@
                                                         <td><b><span class="brdTop">Psychometrician</span>: </b></td>
                                                         <td>
                                                             <div class="col-md-8">
-                                                                <select required name="technician_id" id="technician_id"
+                                                                <select  name="technician_id" id="technician_id"
                                                                     class="form-control">
                                                                     @foreach($psychometricians as $psychometrician)
                                                                         <option value={{$psychometrician->id}} {{$psychometrician->id == $exam->technician_id ? "selected" : null}}>{{$psychometrician->firstname}} {{$psychometrician->lastname}}</option>
@@ -798,7 +798,7 @@
                                                         <td width="16%"><b>Psychologist: </b></td>
                                                         <td width="84%">
                                                             <div class="col-md-8">
-                                                                <select required name="technician2_id"
+                                                                <select  name="technician2_id"
                                                                     id="technician2_id" class="form-control">
                                                                     @foreach($psychologists as $psychologist)
                                                                         <option value={{$psychologist->id}} {{$psychologist->id == $exam->technician_id ? "selected" : null}}> {{$psychologist->firstname}} {{$psychologist->lastname}}</option>

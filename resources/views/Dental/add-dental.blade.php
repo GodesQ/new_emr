@@ -686,7 +686,7 @@
                                                             <td width="14%"><b>Dentist: </b></td>
                                                             <td width="86%">
                                                                 <div class="col-md-8">
-                                                                    <select required name="technician_id"
+                                                                    <select name="technician_id"
                                                                         id="technician_id" class="form-control">
                                                                         @foreach ($dentists as $dentist)
                                                                             <option value={{ $dentist->id }}>

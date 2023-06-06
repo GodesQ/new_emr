@@ -365,10 +365,10 @@
                                                 <img src="@php echo base64_decode($admission->patient_signature) @endphp" width="150" height="25" style="object-fit: cover;" class="signature-taken" />
                                                 @elseif ($admission->signature)
                                                     <img src="data:image/jpeg;base64,{{$admission->signature}}" class="signature-taken"  width="150" height="25" style="object-fit: cover;"/>
-                                                @else 
+                                                @else
                                                     <div style="width: 150px;height: 40px;"></div>
                                                 @endif
-                                            
+
                                         </td>
                                     </tr>
                                     <tr>
@@ -735,7 +735,7 @@
                                             @if ($exam_xray)
                                                 {{$exam_xray->xray_no}}
                                             @endif
-                                           
+
                                         </td>
                                         <td width="21%"><b>E.Stool Exam :</b></td>
                                         <td width="11%">
@@ -751,7 +751,7 @@
                                     </tr>
                                     <tr>
                                         <td rowspan="2" valign="top">
-                                            
+
                                             <br>
                                         </td>
                                         <td><b>F.HBsAg :</b></td>
@@ -895,7 +895,7 @@
                                     </strong></p>
                             </td>
                             <td><span style="font-size: 11px">Valid Until </span>: <strong>
-                                    
+
                                 </strong> <br>
                                 <span style="font-size: 11px">Provided the seafarer is deployed within 90 days from the
                                     date of fitness</span>
@@ -920,9 +920,9 @@
                                             <table width="260" border="0">
                                                 <tr>
                                                     <td width="227" align="center" style="border-bottom: 1px black solid">
-                                                        @if ($technician1)
-                                                            <img src="{{$technician1->signature}}" width="130" /> <br>
-                                                            {{$technician1->firstname . " " . $technician1->middlename . " " . $technician1->lastname . ", " . $technician1->title}}
+                                                        @if (optional($technician1))
+                                                            <img src="{{optional($technician1)->signature}}" width="130" /> <br>
+                                                            {{optional($technician1)->firstname . " " . optional($technician1)->middlename . " " . optional($technician1)->lastname . ", " . optional($technician1)->title}}
                                                         @endif
                                                     </td>
                                                 </tr>
@@ -953,16 +953,16 @@
                                     <tr>
                                         <td width="14%">&nbsp;</td>
                                         <td width="17%">PRC NO.-
-                                            {{$technician1->license_no}}
+                                            {{optional(optional($technician1))->license_no}}
                                         </td>
                                         <td width="25%">Expiry -
-                                            {{$technician1->license_expdate}}
+                                            {{optional($technician1)->license_expdate}}
                                         </td>
                                         <td width="17%">PRC No. -
-                                            
+
                                         </td>
                                         <td width="27%">Expiry -
-                                            
+
                                         </td>
                                     </tr>
                                 </table>
