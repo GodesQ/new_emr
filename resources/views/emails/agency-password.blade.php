@@ -142,7 +142,7 @@
                     <tr>
                         <td bgcolor="#ffffff" align="center"
                             style="padding: 0px 30px 20px 30px; color: #666666; font-family: 'Google Sans', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 25px;">
-                            <p style="margin: 0;">If you have any questions, please message us at info@meritaclinic.ph.
+                            <p style="margin: 0;">If you have any questions, please message us at info@gomedical.ph.
                             </p>
                         </td>
                     </tr>

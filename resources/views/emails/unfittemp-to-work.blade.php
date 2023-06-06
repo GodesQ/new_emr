@@ -142,16 +142,6 @@
                                                     </div>
                                                 </td>
                                             </tr>
-                                            <!--<tr>-->
-                                            <!--    <td>-->
-                                            <!--        <div style="margin-bottom: 1rem;">-->
-                                            <!--            <div><b>Remarks/Recommendation</b></div>-->
-                                            <!--            <div>-->
-                                            <!--                @php echo nl2br($admission->remarks) @endphp-->
-                                            <!--            </div>-->
-                                            <!--        </div>-->
-                                            <!--    </td>-->
-                                            <!--</tr>-->
                                         </table>
                                     </td>
                                 </tr>
